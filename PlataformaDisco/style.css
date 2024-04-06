@@ -22,6 +22,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.imgTitle{
+  width: 500px;
+}
+
 body{
     font-family: "Raleway", sans-serif;
 font-optical-sizing: auto;
@@ -150,3 +155,63 @@ font-style: normal;
   .user{
     font-size: 20px;
   }
+
+  .sidebar {
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to bottom,#535b66, #869091, #d6a992 ,#a67f7a,#574553);
+    color: white; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto; 
+    font-size: 22px; 
+    
+  }
+  
+  .user {
+    padding: 20px;
+  }
+  
+  .user .username {
+    font-weight: bold;
+  }
+  
+  .menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .menu .section {
+    margin-bottom: 20px;
+    border: solid 2px;
+    border-color: rgb(255, 255, 255);
+  }
+  
+  .menu a {
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    color: rgb(232, 253, 41);
+  }
+
+  .Evolve{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    flex-direction: column;
+  }
+.imgEvolve{
+  width: 300px;
+}
+ol{
+  display: flex;
+  justify-content:flex-start;
+  margin-left: 15%;
+  align-items: flex-end;
+  flex-direction: column;
+}
