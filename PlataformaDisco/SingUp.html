@@ -8,13 +8,18 @@
       <title>Imagine Dragons</title>
       <link rel="stylesheet" href="style.css" />
       <link rel="icon" href="f104f846351d61cee8ef66f9d7fc5f09.ico" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body class="sing_up">
       <div class="TitleRegis">
-        <h3>Registro</h3>
+        <img src="TitleLogSing/images.jpeg" alt="">
       </div>
-      <div class="Singup">
-        <form action="" method="post">
+      <div class="singUp">
+        <form action="" method="post" class="form">
+          <p class="title">Registrate </p>
+          <p class="message">Registrate y obtene acceso total a la pagina! </p>
             <label>Nombre
                 <input
                 type="text"
@@ -22,6 +27,7 @@
                 placeholder="Nombre"
                 maxlength="40"
                 required
+                class="input"
               />
             </label>
             <label>Apellido
@@ -31,6 +37,7 @@
                 placeholder="Apellido"
                 maxlength="20"
                 required
+                class="input"
               />
             </label>
             <label>Correo electronico
@@ -40,6 +47,7 @@
                 placeholder="Email"
                 maxlength="50"
                 required
+                class="input"
               />
             </label>
             <label>Password 
@@ -49,9 +57,11 @@
                 placeholder="Password"
                 maxlength="10"
                 required
+                class="input"
               />
             </label>
-            <button type="submit">Registrarse</button>
+            <button type="submit" class="submit" ><a href="index.html">Registrarse</a></button>
+
         </form>
       </div>
     </body>

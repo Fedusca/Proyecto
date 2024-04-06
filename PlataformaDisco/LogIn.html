@@ -6,11 +6,17 @@
     <title>Imagine Dragons</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="f104f846351d61cee8ef66f9d7fc5f09.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div class="TitleInicia"></div>
-    <div class="LogIn">
-      <form action="" method="post">
+  <body class="sing_up">
+    <div class="TitleRegis">
+      <img src="TitleLogSing/images.jpeg" alt="">
+    </div>
+    <div class="singUp">
+      <form action="" method="post" class="form">
+        <p class="title">Inicia Sesion </p>
         <label>Email
             <input
             type="email"
@@ -18,6 +24,7 @@
             placeholder="Email"
             maxlength="40"
             required
+            class="input"
           />
         </label>
         <label>Password
@@ -27,14 +34,12 @@
             placeholder="Password"
             maxlength="10"
             required
+            class="input"
           />
         </label>
-        <button type="submit">Inicia sesion</button>
+        <button type="submit" class="submit" ><a href="index.html">Inicia Sesion</a></button>
+        <p class="signin">¿Todavia no te registraste? <a href="SingUp.html">Registrate aqui!</a> </p>
       </form>
-    </div>
-    <div class="RegistroLog">
-      <p>¿Aún no sos miembro? ¡Registrate!</p>
-      <a href="SingUp.html">Registrate ahora</a>
     </div>
   </body>
 </html>
