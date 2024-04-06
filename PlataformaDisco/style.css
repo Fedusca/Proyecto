@@ -1,18 +1,6 @@
-@media screen and (max-width: 768px) {
-    .NotiUp div,
-    .NotiDown div {
-        width: calc(50% - 20px);
-    }
-}
-@media screen and (max-width: 480px) {
-    .NotiUp div,
-    .NotiDown div {
-        width: calc(100% - 20px);
-    }
-}
 
 .bgIndex{
-  background-image: url(Background/imagine.jpg);
+  background-image: url(Background/starry-background-blue-night-sky-design-illustration-vector.jpg);
   height: 100%;
   width: 100%;
 }
@@ -22,6 +10,7 @@
   justify-content: center;
   align-items: center;
   margin-left: 15%;
+  margin-top: 40px;
 }
 
 .imgTitle{
@@ -60,7 +49,7 @@ font-style: normal;
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
-    background-color: #e7e6e6;
+    background: linear-gradient(to bottom,#535b66, #869091, #d6a992 ,#a67f7a,#574553);
     padding: 50px;
     border-radius: 20px;
     position: relative;
@@ -135,7 +124,7 @@ font-style: normal;
     background-color: rgb(80, 194, 141);
     padding: 10px;
     border-radius: 10px;
-    color: #fff;
+      
     font-size: 16px;
     transform: .3s ease;
     margin-top: 10px;
@@ -240,4 +229,20 @@ ol{
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .NotiUp div,
+    .NotiDown div {
+        width: calc(50% - 20px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .NotiUp div,
+    .NotiDown div {
+        width: calc(100% - 20px);
+    }
+}
+audio:hover {
+  filter: drop-shadow(2px 3px 3px #333);
 }
