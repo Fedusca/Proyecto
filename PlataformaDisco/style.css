@@ -21,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 15%;
 }
 
 .imgTitle{
@@ -211,7 +212,28 @@ font-style: normal;
 ol{
   display: flex;
   justify-content:flex-start;
-  margin-left: 15%;
   align-items: flex-end;
   flex-direction: column;
+}
+.bodyEvolve{
+ background-color: rgb(216, 216, 216);
+}
+.pEvolve{
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+}
+.songList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  
+}
+
+.titlesong{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
