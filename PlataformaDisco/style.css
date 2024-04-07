@@ -5,12 +5,88 @@
   width: 100%;
 }
 
+.bgTour{
+  background-image: url(Background/show.jpeg);
+  height: 100%;
+  width: 100%;
+  
+}
+
 .TitleMain{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 15%;
   margin-top: 40px;
+}
+.Tour{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: column ;
+  background: linear-gradient(to bottom,#535b66, #869091, #d6a992 ,#a67f7a,#574553);
+  margin-left: 700px;
+  margin-right: 700px;
+  border-radius: 15px;
+  border: transparent;
+  
+}
+.date{
+display: flex;
+border: solid black 1px;
+width: 95%;
+justify-content: space-around;
+align-items: center;
+flex-direction: row;
+border-radius: 15px;
+margin-bottom: 15px;
+padding: 10px;
+}
+
+.date:hover{
+  filter: drop-shadow(2px 2px 2px rgb(70, 67, 67));
+}
+
+.pDate{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+
+}
+
+.fecha{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px; 
+  flex-direction: row-reverse;
+  background-color: rgb(0, 76, 148);
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+}
+.buy:hover{
+  background-color: rgb(37, 1, 105);
+  color: white;
+}
+
+
+.titleTour{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 40px;
+  
 }
 
 .imgTitle{
@@ -151,14 +227,16 @@ font-style: normal;
     width: 10%;
     height: 100%;
     background: linear-gradient(to bottom,#535b66, #869091, #d6a992 ,#a67f7a,#574553);
-    color: white; 
+    color: white;
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
-    overflow-y: auto; 
-    font-size: 22px; 
-    
+    overflow-y: auto;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   
   .user {
@@ -174,6 +252,8 @@ font-style: normal;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-right: 2px;
+    display: flex;
+    flex-direction: column;
   }
   
   .menu .section {
@@ -184,7 +264,7 @@ font-style: normal;
   }
   
   .menu a {
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);
     text-decoration: none;
   }
   
