@@ -8,35 +8,34 @@
     <link rel="icon" href="f104f846351d61cee8ef66f9d7fc5f09.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/d6b943133b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body class="bgTour">
     <div class="titleTour">
-      <img
-        src="TitleLogSing/images.jpeg" 
-        alt=""
-        class="imgTitle"
-      />
+       <img src="TitleLogSing/images.jpeg" alt="" class="imgTitle" />
+    </div>
+    <div class="iSpan">
+      <i></i>
+      <span id="welcome"></span>
     </div>
     <div class="sidebar">
       <div class="user">
-        <img src="iconoUser/imagine-dragons-lohan.jpg" alt="User Icon" class="userIco">
+        <img
+          src="iconoUser/imagine-dragons-lohan.jpg"
+          alt="User Icon"
+          class="userIco"
+        />
         <span class="username">Fedusca</span>
       </div>
       <div class="menu">
         <div class="section">
-          <a href="index.html">
-            Volver al Inicio
-          </a>
+          <a href="index.html"> Volver al Inicio </a>
         </div>
         <div class="section">
-          <a href="index.html">
-            Más Albunes
-          </a>
+          <a href="index.html"> Más Albunes </a>
         </div>
         <div class="section">
           <a href="Addalbum.html"> Agrega albunes </a>
@@ -45,34 +44,48 @@
           <a href="editAlbum.html"> Editar album </a>
         </div>
         <div class="section">
-          <a href="LogIn.html">
-            Iniciar Sesion
-          </a>
+          <a href="LogIn.html"> Iniciar Sesion </a>
         </div>
         <div class="section">
-          <a href="LogIn.html">
-            Log out
-          </a>
+          <a href="LogIn.html"> Log out </a>
         </div>
       </div>
     </div>
-    <div class="Tour ">
-        <h1 class="my-1.5 text-2xl font-bold tracking-wide text-emerald-50">Fechas 2024</h1>
+
+    <div class="Tour">
+      <h1 class="my-1.5 text-2xl font-bold tracking-wide text-emerald-50">
+        Fechas 2024
+      </h1>
       <div class="date">
-      <button class="buy"><a href="index.html">Buy Ticket</a></button> <img class="w-10" src="PERU_bANDERA.png" alt="bICO"> <p class="pDate text-lg">08/09 Lima</p>
-      </div>
-      <div class="date">
-        <button class="buy"><a href="index.html">Buy Ticket</a></button> <img class="w-10" src="brasil-bandera-boton.png" alt="bICO"> <p class="pDate text-lg">10/09 Sao Paulo</p>
-      </div>
-      <div class="date">
-        <button class="buy"><a href="index.html">Buy Ticket</a></button> <img class="w-10" src="arg.png" alt="bICO"> <p class="pDate text-lg">12/09 Buenos Aires </p>
-      </div>
-      <div class="date"> 
-        <button class="buy"><a href="index.html">Buy Ticket</a></button> <img class="w-10" src="arg.png" alt="bICO"> <p class="pDate text-lg">14/09 Cordoba</p>
+        <h1>08/09/24 Lima</h1>
+        <img class="w-10" src="PERU_bANDERA.png" alt="bICO" />
+        <button class="buy" lugar="Peru">Comprar entrada</button>
       </div>
       <div class="date">
-        <button class="buy"><a href="index.html">Buy ticket</a></button> <img class="w-10" src="e59be84c157b5a4af7e1f3709d4aad8d.png" alt="bICO"> <p class="pDate text-lg">15/09 Montevideo</p>
+        <h1>10/09 Sao Paulo</h1>
+        <img class="w-10" src="brasil-bandera-boton.png" alt="bICO" />
+        <button class="buy">Comprar entrada</button>
       </div>
-</div>
+      <div class="date">
+        <h1>12/09 Buenos Aires</h1>
+        <img class="w-10" src="arg.png" alt="bICO" />
+        <button class="buy">Comprar entrada</button>
+      </div>
+      <div class="date">
+        <h1>14/09 Cordoba</h1>
+        <img class="w-10" src="arg.png" alt="bICO" />
+        <button class="buy">Comprar entrada</button>
+      </div>
+      <div class="date">
+        <h1>15/09 Montevideo</h1>
+        <img
+          class="w-10"
+          src="e59be84c157b5a4af7e1f3709d4aad8d.png"
+          alt="bICO"
+        />
+        <button class="buy">Comprar entrada</button>
+      </div>
+    </div>
+    <script src="tours.js"></script>
   </body>
 </html>
