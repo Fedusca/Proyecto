@@ -14,7 +14,6 @@
 // Preguntale su edad y guardala en una Variable.
 // Por último, mostrale un mensaje al usuario que incluya su nombre y edad. Por ejemplo:
 
-
 // 2
 
 // Proyecto
@@ -39,45 +38,95 @@
 // Además, cuando por fin se ingrese el nombre correcto, deberá aparecer el icono de tickets justo al nombre del usuario.
 // Tené en cuenta que deberás incluir un ícono con un enlace CDN de Font Awesome. Luego, deberás agregarlo a tu archivo HTML y configurar el elemento con la clase del ícono deseado.
 
+// 3 Proyecto
+// No minors allowed:
+// Al entrar a la página de tours para adquirir tickets:
+
+// Le pedimos al usuario que ingrese su edad.
+// Si se trata de un menor, vamos a advertirle que no puede comprar tickets con un alerta de la librería sweetAlert como vimos la clase pasada.
+// Luego deshabilitaremos los botones para que no pueda clickearlos.
+// Por último, vamos a cambiarle el color a los botones que están deshabilitados para hacerlo más evidente para nuestros ususarios.
+
+
 
 const span = document.getElementById("welcome");
 let nombre = prompt("¿Cuál es tu nombre?").toUpperCase();
 
-while(nombre.length < 3){
-nombre = prompt(
+while (nombre.length < 3) {
+  nombre = prompt(
     "Tu nombre no puede contener menos de 3 caracteres, ingresa tu nombre nuevamente"
-).toUpperCase();
+  ).toUpperCase();
 }
 
 let edad = prompt("¿Cuántos años tienes?");
 
+while (isNaN(edad)) {
+  edad = parseInt(prompt("Por favor, ingresa una edad válida (número entero)"));
+}
+
+if (edad < 18) {
+  swal(
+    "Lo siento",
+    "Solo los mayores de edad pueden comprar tickets.",
+    "warning"
+  );
+
+
+const buyButtons = document.querySelectorAll(".buy");
+  buyButtons.forEach(function (button) {
+    button.disabled = true;
+    button.style.backgroundColor = "lightgray";
+  });
+}
+
 span.textContent = " Hola, " + nombre.toUpperCase() + " adquiri tu entrada!";
+
+
+
+let tickets = {
+  "Lima": 35,
+  "Sao Paulo": 9,
+  "Buenos Aires": 2,
+  "Cordoba": 9,
+  "Montevideo": 100,
+};
 
 const i = document.querySelector("i");
 i.setAttribute("class", "fa-solid fa-ticket fa-2xl");
 i.style.color = "#000000";
 
-const button = document.querySelector(".buy");
+const buttons = document.querySelectorAll(".buy");
 
-document.addEventListener("click", function() {
-    const button = document.querySelector(".buy");
-  
-    button.addEventListener("click", function() {
-      const lugar = this.getAttribute("lugar");
-      getTickets(true, lugar);
-    });
+buttons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    const lugar = this.getAttribute("lugar");
+    getTickets(lugar);
   });
-const getTickets = (hayTickets, lugar) => {
-    if (hayTickets) {
-      swal ("Hay entradas disponibles para el concierto en " , lugar, "success");
-    } else {
-      swal ("Lo siento, no hay entradas disponibles para el concierto en " + lugar + "error");
+});
+
+const getTickets = (lugar) => {
+  if (tickets[lugar] > 0)  {
+    tickets[lugar]--;
+    swal(` Adquiriste una entrada quedan ${tickets[lugar]} entradas disponibles para el concierto en ${lugar}`, "", "success");
+  } else {
+    swal(
+      `Lo siento, no hay entradas disponibles para el concierto en ${lugar}`,
+      "",
+      "error"
+    );
+  }
+  disableSoldOutButtons();
+};
+
+const disableSoldOutButtons = () => {
+  const buyButtons = document.querySelectorAll(".buy");
+  buyButtons.forEach(button => {
+    const lugar = button.getAttribute('lugar');
+    if (tickets[lugar] === 0) {
+      button.disabled = true;
+      button.textContent = "SOLD OUT";
+      button.style.backgroundColor = "red";
     }
-  };
-
-
+  });
+};
 //alert(`¡Hola ${nombre}! Tienes ${edad} años. ¡Bienvenido!`);
-
-
-
-
