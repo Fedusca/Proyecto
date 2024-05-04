@@ -79,6 +79,8 @@ const buyButtons = document.querySelectorAll(".buy");
   });
 }
 
+
+
 span.textContent = " Hola, " + nombre.toUpperCase() + " adquiri tu entrada!";
 
 
@@ -129,4 +131,7 @@ const disableSoldOutButtons = () => {
     }
   });
 };
+
+
+
 //alert(`¡Hola ${nombre}! Tienes ${edad} años. ¡Bienvenido!`);
