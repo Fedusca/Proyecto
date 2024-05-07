@@ -1,21 +1,23 @@
 .bgIndex {
-  background-image: url(Background/starry-background-blue-night-sky-design-illustration-vector.jpg);
+  background-image: url(../assets/imagenes/background/IMAGD-0057_NewAlbumStoreReskinFooter-Desktop.webp);
   height: 100%;
   width: 100%;
 }
 
 .bgTour {
-  background-image: url(Background/show.jpeg);
+  background-image: url(../assets/imagenes/background/show.jpeg);
   height: 100%;
   width: 100%;
 }
+
+
 
 .TitleMain {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 15%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .Tour {
   width: 500px;
@@ -119,7 +121,7 @@ body {
 }
 
 .sing_up {
-  background-image: url(FondoLogSing/996730.png);
+  background-image: url(../assets/imagenes/fondoLogSing/996730.png);
   font-family: "Raleway";
   font-weight: 600;
   font-style: normal;
@@ -176,6 +178,7 @@ body {
   display: flex;
   width: 100%;
   gap: 6px;
+  align-items: flex-start;
 }
 
 .form label {

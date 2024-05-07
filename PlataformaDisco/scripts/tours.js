@@ -71,17 +71,16 @@ if (edad < 18) {
     "warning"
   );
 
-
-const buyButtons = document.querySelectorAll(".buy");
+  const buyButtons = document.querySelectorAll(".buy");
   buyButtons.forEach(function (button) {
     button.disabled = true;
     button.style.backgroundColor = "lightgray";
   });
+
+  span.textContent = "Hola, " + nombre + ", tienes que ser mayor de edad para adquirir entradas :(";
+} else {
+  span.textContent = "Hola, " + nombre.toUpperCase() + ", adquiri tu entrada!";
 }
-
-
-
-span.textContent = " Hola, " + nombre.toUpperCase() + " adquiri tu entrada!";
 
 
 

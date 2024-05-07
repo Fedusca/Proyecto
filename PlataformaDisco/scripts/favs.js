@@ -12,7 +12,8 @@ function addFavorites(favorites) {
       icon.style.position = "absolute";
       icon.style.top = "10px";
       icon.style.left = "10px";
-
+      icon.style.color = "gold";
+      
       img.parentNode.style.position = "relative";
 
       img.parentNode.appendChild(icon);

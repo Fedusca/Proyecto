@@ -4,22 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Imagine Dragons</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="f104f846351d61cee8ef66f9d7fc5f09.ico" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="icons/f104f846351d61cee8ef66f9d7fc5f09.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    />  
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/d6b943133b.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d6b943133b.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body class="bgIndex">
     <div class="TitleMain">
       <img
-        src="TitleLogSing/images.jpeg"
+        src="assets/imagenes/titleLogSing/Imagine-Dragons-Logo.png"
         alt=""
         class="imgTitle"
       />
@@ -27,7 +30,7 @@
     <div class="sidebar">
       <div class="user">
         <img
-          src="iconoUser/imagine-dragons-lohan.jpg"
+          src="assets/imagenes/iconoUser/imagine-dragons-lohan.jpg"
           alt="User Icon"
           class="userIco"
         />
@@ -35,7 +38,7 @@
       </div>
       <div class="menu">
         <div class="section">
-          <a href="Addalbum.html"> Agrega albunes </a>
+          <a href="addalbum.html"> Agrega albunes </a>
         </div>
         <div class="section">
           <a href="editAlbum.html"> Editar album </a>
@@ -44,78 +47,97 @@
           <a href="addSong.html"> Agrega canciones </a>
         </div>
         <div class="section">
-          <a href="Tours.html"> Tours </a>
+          <a href="tours.html"> Tours </a>
         </div>
         <div class="section">
-          <a href="SingUp.html"> Registrarse</a>
+          <a href="singUp.html"> Registrarse</a>
         </div>
         <div class="section">
-          <a href="LogIn.html"> Iniciar Sesion </a>
+          <a href="logIn.html"> Iniciar Sesion </a>
         </div>
         <div class="section">
-          <a href="LogIn.html"> Log out </a>
+          <a href="logIn.html"> Log out </a>
         </div>
       </div>
     </div>
-    <div class="flex justify-center ">
-
-      
-      <p class="ml-40 mt-8 w-2/5 text-xl font-extrabold  text-yellow-500">
+    <div class="flex justify-center">
+      <p class="ml-40 mt-8 w-2/5 text-xl font-extrabold text-black-700">
         Imagine Dragons es una banda estadounidense de pop rock originaria de
         Las Vegas, Nevada. Está compuesta por Dan Reynolds (vocalista), Wayne
         Sermon (guitarrista), Ben McKee (bajista) y Daniel Platzman (baterista).
         Ganó el reconocimiento mundial con el lanzamiento de su álbum de estudio
         debut Night Visions (2012), y con su canción "It's Time". Billboard los
         colocó en la cima de su lista de popularidad del 2013 "Year In Rock", y
-        los llamó «la banda revelación del 2013». La revista Rolling Stone
-        llamó a su canción Radioactive, del álbum Night Visions, «el mayor éxito
-        rock del año».MTV los llamó «la banda revelación del año».10
-        "Radioactive" es la segunda canción con más semanas dentro del Billboard
-        Hot 100 en la historia, con un total de 87 semanas. Night Visions
-        alcanzó su punto máximo en el número dos de la lista semanal Billboard
-        200 y en UK Albums Chart. Su segundo álbum de estudio, Smoke + Mirrors,
-        alcanzó el número uno en los Estados Unidos, Canadá y el Reino
-        Unido. Imagine Dragons ganó dos American Music Awards por "Artista
-        Alternativo Favorito", un premio Grammy a la mejor interpretación rock,
-        cinco premios Billboard Music Awards y un premio World Music Award. En
-        mayo de 2014, la banda obtuvo un total de catorce nominaciones en
-        diferentes categorías en los Billboard Music Awards, incluyendo "Top
-        Artist of the Year" y un Milestone Award, el cual reconoce la innovación
-        y la creatividad de varios artistas a través de diferentes géneros.
-        Hasta enero de 2017, Imagine Dragons había vendido 9 millones de copias
-        de sus álbumes, y 27 millones en sencillos.​</p>
-        <div class="mt-8 ml-40 grid gap-x-24 gap-y-10 grid-cols-2 text-yellow-500 justify-items-end">
-          <div>
-            <a href="Origins.html">
-              <img src="Origins/Origins_cover.jpg" alt="Tape" class="w-72 h-auto" name="Origins">
-              Origins
-            </a>
-          </div>
-          <div >
-            <a href="Evolve.html">
-              <img src="Evolve/EVOLVE COVER.jpg" alt="Tape" class="w-72" name="Evolve">
-              Evolve
-            </a>
-           </div>
-          
-          <div >
-            <a href="nigthVision.html">
-              <img src="nigthVision/zuyerphzzf04b_600.jpg" alt="Tape" class="w-72" name="Nigth Vision">
-              Night Vision
-            </a>
-            
-          </div>
-          
-          <div >
-            <a href="smokeMirrors.html">
-              <img src="smokeMirrors/0060254762377_600.jpg" alt="Tape" class="w-72" name="Smoke Mirrors">
-              Smoke Mirrors
-            </a>
-            
-          </div>
-        </div>  
+        los llamó «la banda revelación del 2013». La revista Rolling Stone llamó
+        a su canción Radioactive, del álbum Night Visions, «el mayor éxito rock
+        del año».MTV los llamó «la banda revelación del año».10 "Radioactive" es
+        la segunda canción con más semanas dentro del Billboard Hot 100 en la
+        historia, con un total de 87 semanas. Night Visions alcanzó su punto
+        máximo en el número dos de la lista semanal Billboard 200 y en UK Albums
+        Chart. Su segundo álbum de estudio, Smoke + Mirrors, alcanzó el número
+        uno en los Estados Unidos, Canadá y el Reino Unido. Imagine Dragons ganó
+        dos American Music Awards por "Artista Alternativo Favorito", un premio
+        Grammy a la mejor interpretación rock, cinco premios Billboard Music
+        Awards y un premio World Music Award. En mayo de 2014, la banda obtuvo
+        un total de catorce nominaciones en diferentes categorías en los
+        Billboard Music Awards, incluyendo "Top Artist of the Year" y un
+        Milestone Award, el cual reconoce la innovación y la creatividad de
+        varios artistas a través de diferentes géneros. Hasta enero de 2017,
+        Imagine Dragons había vendido 9 millones de copias de sus álbumes, y 27
+        millones en sencillos.​
+      </p>
+      <div
+        class="mt-8 ml-40 grid gap-x-24 gap-y-10 grid-cols-2 text-black-700 justify-items-end"
+      >
+        <div class="imgAlbum">
+          <a href="origins.html">
+            <img
+              src="assets/discos/origins/Origins_cover.jpg"
+              alt="Tape"
+              class="w-72 h-auto"
+              name="Origins"
+            />
+            Origins
+          </a>
+        </div>
+        <div>
+          <a href="evolve.html">
+            <img
+              src="assets/discos/evolve/EVOLVE COVER.jpg"
+              alt="Tape"
+              class="w-72"
+              name="Evolve"
+            />
+            Evolve
+          </a>
+        </div>
+
+        <div>
+          <a href="nigthVision.html">
+            <img
+              src="assets/discos/nigthVision/zuyerphzzf04b_600.jpg"
+              alt="Tape"
+              class="w-72"
+              name="Nigth Vision"
+            />
+            Night Vision
+          </a>
+        </div>
+
+        <div>
+          <a href="smokeMirrors.html">
+            <img
+              src="assets/discos/smokeMirrors/0060254762377_600.jpg"
+              alt="Tape"
+              class="w-72"
+              name="Smoke Mirrors"
+            />
+            Smoke Mirrors
+          </a>
+        </div>
+      </div>
     </div>
 
-   <script src="favs.js"></script>
+    <script src="scripts/favs.js"></script>
   </body>
 </html>
