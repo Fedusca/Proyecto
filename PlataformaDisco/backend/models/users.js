@@ -33,7 +33,7 @@ let users = new Schema({
        },
     },
     contraseña: String,
-    favoritos: String
+    favoritos: []
 });
 
 module.exports = mongoose.model("nuevo usuario", users);

@@ -1,6 +1,6 @@
 
 const express = require('express');
-const router = express.Router();
+const albumRouter = express.Router();
 const Album = require('../models/album'); 
 
 
@@ -14,4 +14,4 @@ router.get('/', async function(req, res) {
 });
 
 
-module.exports = router;
+module.exports = albumRouter;

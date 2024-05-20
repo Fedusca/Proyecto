@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 const PORT = 5000;
-const usersRouter = require("./routes/users")
+const userRouter = require("./routes/users")
 const albumRouter = require("./routes/album")
+const path = require("path");
 
-app.use = ("/users", usersRouter);
+app.use(cors());
+app.use = ("/users", userRouter);
 app.use = ("/album", albumRouter);
 
 // mongoose.connect("mongodb+srv://fedusca:del1al9@cluster0.blldddk.mongodb.net/Proyecto?retryWrites=true&w=majority&appName=Cluster0")

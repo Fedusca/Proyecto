@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const userRouter = express.Router();
 const Users = require('../models/users'); 
 
 router.get('/', async function(req,res){
@@ -11,4 +11,4 @@ router.get('/', async function(req,res){
     res.send(usuario);
 })
 
-module.exports = router;
+module.exports = userRouter;

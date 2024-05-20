@@ -29,7 +29,8 @@ let Album = new Schema({
         titulo: String,
         duracion: String
     }],
-    portada: String
+    portada: String,
+    favoritos:false
 });
 
 
