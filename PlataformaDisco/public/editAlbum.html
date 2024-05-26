@@ -47,11 +47,11 @@
         <p class="title">Edita un album</p>
         <label
           >Titulo
-          <input type="text" placeholder="Titulo" class="input" />
+          <input type="text" placeholder="Titulo" class="input" id="titulo"/>
         </label>
         <label
           >Fecha de lanzamiento
-          <input type="date" name="Año" class="input" />
+          <input type="number" name="Año" class="input" id="year"/>
         </label>
         <label
           >Descripcion
@@ -62,21 +62,26 @@
             placeholder="Descripcion"
             maxlength="120"
             class="input"
+            id="descripcion"
           ></textarea>
         </label>
         <label
           >Imagen de album
           <input
-            type="url"
+            type="text"
             name="Image"
             placeholder="URL de imagen"
             class="input"
+            id="portada"
           />
         </label>
-        <button type="submit" class="submit">Editar</button>
+        <button type="submit" class="submit" id="edit">Editar</button>
         <button type="submit" class="submit" id="cancelar">Cancelar</button>
       </form>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/editAlbum.js"></script>
     <script src="scripts/valueForm.js"></script>
   </body>
 </html>

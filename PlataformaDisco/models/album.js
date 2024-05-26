@@ -19,7 +19,8 @@ let Album = new Schema({
     },     
     canciones: [{
         titulo: String,
-        duracion: String
+        duracion: Number,
+        direccion: String
     }],
     year: {
         type: Number,
@@ -35,7 +36,7 @@ let Album = new Schema({
     favoritos:{
         type:Boolean,
         default: false
-    }
+    },
 });
 
 

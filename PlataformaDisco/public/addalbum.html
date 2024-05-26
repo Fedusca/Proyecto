@@ -51,11 +51,11 @@
         <p class="title">Agrega un Album!</p>
         <label
           >Titulo
-          <input type="text" placeholder="Titulo" class="input" />
+          <input type="text" placeholder="Titulo" class="input" id="titulo" />
         </label>
         <label
           >Fecha de lanzamiento
-          <input type="date" name="Año" class="input" />
+          <input type="number" name="Año" class="input" id="year" />
         </label>
         <label
           >Descripcion
@@ -66,6 +66,8 @@
             placeholder="Descripcion"
             maxlength="120"
             class="input"
+            id="descripcion"
+            
           ></textarea>
         </label>
         <label
@@ -75,12 +77,15 @@
             name="Image"
             placeholder="URL de imagen"
             class="input"
+            id="portada"
           />
         </label>
-        <button type="submit" class="submit">Agregar Album</button>
+        <button type="submit" class="submit" id="btnAdd">Agregar Album</button>
         <button type="submit" class="submit" id="cancelar">Cancelar</button>
       </form>
     </div>
-    <script src="scripts/valueForm.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/addAlbum.js"></script>
   </body>
 </html>

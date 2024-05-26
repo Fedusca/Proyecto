@@ -2,6 +2,9 @@ function validateForm(form) {
   const inputs = form.getElementsByTagName("input");
 
   for (let i = 0; i < inputs.length; i++) {
+    // Si el id del input es "portada", omite la validación y continúa con el siguiente input
+    if (inputs[i].id === "portada") continue;
+
     if (inputs[i].value.trim() === "") {
       swal(
         "Error",
@@ -14,19 +17,3 @@ function validateForm(form) {
 
   return true;
 }
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    const forms = document.querySelectorAll(".form");
-  
-    forms.forEach((form) => {
-      form.onsubmit = () => validateForm(form);
-    });
-  
-    const cancelButton = document.getElementById('cancelar');
-    if(cancelButton) {
-      cancelButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'index.html';
-      });
-    }
-  });

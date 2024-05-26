@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Imagine Dragons</title>
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="icon" href="icons/f104f846351d61cee8ef66f9d7fc5f09.ico" />
+    <link rel="icon" href="assets/imagenes/icons/f104f846351d61cee8ef66f9d7fc5f09.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,36 +50,32 @@
         <p class="title">Agrega una cancion!</p>
         <label
           >Titulo
-          <input type="text" placeholder="Titulo" class="input" />
+          <input type="text" placeholder="Titulo" class="input" id="titulo"/>
         </label>
         <label
-          >Fecha de lanzamiento
-          <input type="date" name="Año" class="input" />
+          >Año de lanzamiento
+          <input type="number" name="Año" class="input" id="year"/>
         </label>
         <label
-          >Descripcion
-          <textarea
-            name="Descripcion"
-            cols="30"
-            rows="10"
-            placeholder="Descripcion"
-            maxlength="120"
-            class="input"
-          ></textarea>
+          >Duracion
+          <input type="number" name="Año" class="input" id="duracion"/>
         </label>
         <label
           >Imagen de album
           <input
-            type="url"
+            type="text"
             name="Image"
             placeholder="URL de imagen"
             class="input"
+            id="portada"
           />
         </label>
-        <button type="submit" class="submit">Agregar cancion</button>
+        <button type="submit" class="submit" id="addCancion">Agregar cancion</button>
         <button type="submit" class="submit" id="cancelar">Cancelar</button>
       </form>
     </div>
     <script src="scripts/valueForm.js"></script>
+    <script src="scripts/addSong.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>

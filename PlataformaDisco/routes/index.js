@@ -7,7 +7,7 @@ const Router = express.Router();
 
 
 app.use(express.json());
-Router.use('/user', userRouter);
+Router.use('/', userRouter);
 Router.use('/Album', albumRouter);
 
 

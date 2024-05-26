@@ -18,7 +18,7 @@ mongoose.connect("mongodb+srv://fedusca:del1al9@cluster0.blldddk.mongodb.net/Pro
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
-app.use('/', routes)
+app.use('/', routes);
 
 
 
