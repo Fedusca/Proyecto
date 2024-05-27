@@ -26,19 +26,16 @@
       </div>
       <div class="menu">
         <div class="section">
-          <a href="index.html"> Volver al Inicio </a>
+          <a href="#" id="indexLink"> Volver al Inicio </a>
+        </div>
+        <div class="section" id="masAlbumesLink">
+          <a href="#"> Más Albunes </a>
         </div>
         <div class="section">
-          <a href="index.html"> Más Albunes </a>
+          <a href="#" id="addAlbumLink"> Agregar album </a>
         </div>
         <div class="section">
-          <a href="addalbum.html"> Agrega albunes </a>
-        </div>
-        <div class="section">
-          <a href="logIn.html"> Iniciar Sesion </a>
-        </div>
-        <div class="section">
-          <a href="logIn.html"> Log out </a>
+          <a href="#" id="addSongLink"> Agregar Cancion </a>
         </div>
       </div>
     </div>
@@ -76,12 +73,12 @@
           />
         </label>
         <button type="submit" class="submit" id="edit">Editar</button>
-        <button type="submit" class="submit" id="cancelar">Cancelar</button>
+        <button type="button" class="submit" id="cancelar">Cancelar</button>
       </form>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/editAlbum.js"></script>
-    <script src="scripts/valueForm.js"></script>
+    <!-- <script src="scripts/valueForm.js"></script> -->
   </body>
 </html>

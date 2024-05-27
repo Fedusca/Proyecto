@@ -1,32 +1,42 @@
-function validateForm(form) {
-    const inputs = form.getElementsByTagName("input");
-  
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].value.trim() === "") {
-        swal(
-          "Error",
-          "Por favor, completa todos los campos antes de enviar el formulario.",
-          "error"
-        );
-        return false;
-      }
-    }
-  
-    return true;
+function validarFormulario() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const contraseña = document.getElementById("contrasena").value.trim();
+
+  if (!nombre || !contraseña) {
+      // Mostrar SweetAlert indicando que se deben completar todos los campos
+      swal(
+         'error', 'por favor llene los campos'
+      );
+  } else {
+      // Si todos los campos están completos, enviar el formulario
+      document.getElementById("form").submit();
   }
-  
-  document.addEventListener("DOMContentLoaded", (event) => {
-      const forms = document.querySelectorAll(".form");
-    
-      forms.forEach((form) => {
-        form.onsubmit = () => validateForm(form);
+}
+document.getElementById("contrasena").addEventListener("input", function(){
+  let pass = this.value;
+  let errorMsj=document.getElementById("mensajeError");
+  if(pass.length < 6){
+      errorMsj.style.display="block";
+  }else{
+      errorMsj.style.display="none";
+  }
+
+})
+let boton = document.getElementById("iniciar");
+let nombre = document.getElementById("nombre");
+let apellido = document.getElementById("apellido");
+let email = document.getElementById("email");
+let contrasenia = document.getElementById("contrasena");
+boton.addEventListener("click", async function(e){
+  e.preventDefault();
+
+      swal({
+          title: "¡sesion iniciada!",
+          text: "Usuario registrado con éxito.",
+          icon: "success",
+          confirmButtonText: "Ok"
+      }).then(() => {
+          window.location.href = "./index.html";
       });
-    
-      const cancelButton = document.getElementById('cancelar');
-      if(cancelButton) {
-        cancelButton.addEventListener('click', function(event) {
-          event.preventDefault();
-          window.location.href = 'index.html';
-        });
-      }
-    });
+
+})

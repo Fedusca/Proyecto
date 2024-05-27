@@ -17,3 +17,18 @@ function validateForm(form) {
 
   return true;
 }
+
+
+// const validateInputs = (titulo, descripcion) => {
+//   if (titulo.trim() === '' && descripcion.trim() === '') {
+//     swal("Debes completar el título y la descripción", { icon: "error" });
+//     return false;
+//   } else if (titulo.trim() === '') {
+//     swal("Debes completar el título", { icon: "error" });
+//     return false;
+//   } else if (descripcion.trim() === '') {
+//     swal("Debes completar la descripción", { icon: "error" });
+//     return false;
+//   }
+//   return true;
+// };

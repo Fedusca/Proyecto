@@ -20,7 +20,8 @@ let Album = new Schema({
     canciones: [{
         titulo: String,
         duracion: Number,
-        direccion: String
+        direccion: String,
+        youtubeLink: String
     }],
     year: {
         type: Number,

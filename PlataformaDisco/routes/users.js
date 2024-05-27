@@ -3,13 +3,13 @@ const router = express.Router();
 const {User} = require('../models/index'); 
 
 //localhost.3000/user/usuario POST
-router.post("/", async function(req,res){
-    let nuevoUsuario = new user(req.body);
+router.post("/user", async function(req,res){
+    let nuevoUsuario = new User(req.body);
     await nuevoUsuario.save();
     res.send("Nuevo usuario creado");
  });
  //localhost.3000/user/usuario/12345123 GET
- router.get("/:id", async function(req,res){
+ router.get("/user/:id", async function(req,res){
      let usuario = await User.findById(req.params.id).select('-contraseña');
      res.send(usuario);
  });
