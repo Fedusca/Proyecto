@@ -1,86 +1,164 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const albumId = getAlbumIdFromUrl();
+// // Verificar si la URL de la página actual corresponde a la página deseada
+// if (window.location.pathname === '/addSong.html') {
+//     // Código a ejecutar solamente en la página deseada
+//     document.getElementById("indexLink").addEventListener("click", function(){
+//         window.location.href = "index.html";
+//     });
 
-  document.getElementById("home").addEventListener("click", function(){
-      window.location.href = 'index.html';
-  });
+// const e = require("cors");
 
-  document.getElementById("addAlbum").addEventListener("click", function(){
-      window.location.href = 'addAlbum.html';
-  });
+//     document.getElementById("masAlbumesLink").addEventListener("click", function(){
+//         window.location.href = "index.html";
+//     });
 
-  document.getElementById("editAlbum").addEventListener("click", function(){
-      if (albumId) {
-          window.location.href = `editAlbum.html?album=${albumId}`;
-      } else {
-          window.location.href = 'editAlbum.html';
-      }
-  });
+//     const getAlbumIdFromUrl = function(){
+//         const params = new URLSearchParams(window.location.search);
+//         return params.get("albumId");
+//     };
 
-  document.getElementById("addSongs").addEventListener("click", function(){
-      if (albumId) {
-          window.location.href = `addSongs.html?album=${albumId}`;
-      } else {
-          window.location.href = "addSongs.html";
-      }
-  });
+//     const getAlbum = async (albumId) => {
+//         try {
+//             const { data } = await axios.get(`http://localhost:5000/Album/albumes/${albumId}`);
+//             return data;
+//         } catch (error) {
+//             console.error(error);
+//             swal("Error", "No se pudo obtener la información del álbum", "error");
+//         }
+//     };
 
-  document.getElementById("tours").addEventListener("click", function(){
-      window.location.href = "Tours.html";
-  });
+//     albumId = getAlbumIdFromUrl();
 
-  document.getElementById("logout").addEventListener("click", function(){
-      window.location.href = "login.html";
-  });
-});
+//     let boton = document.getElementById("botonCancion")
+//     boton.addEventListener("click", function(){
+//         addSong()
+//     });
 
-const getAlbumIdFromUrl = function(){
-  const params = new URLSearchParams(window.location.search);
-  return params.get("album");
-};
+//     document.getElementById("cancelar").addEventListener("click", function(){
+//      window.location.href = `./album.html?id=${albumId}`;;
+//     });
 
-const getAlbum = async (albumId) => {
-  try {
-      const { data } = await axios.get(`http://localhost:5000/albums/band/${albumId}`);
-      return data;
-  } catch (error) {
-      console.error(error);
-      swal("Error", "No se pudo obtener la información del álbum", "error");
-  }
-};
-let boton = document.getElementById("botonEdit")
-boton.addEventListener("click", function(){
-  addSong()
-});
-document.getElementById("botonCancel").addEventListener("click", function(){
-  window.location.href = `./album.html?album=${albumId}`;
-});
+//     const addSong = async () => {
+//         const albumId = getAlbumIdFromUrl();
+//         const titulo = document.getElementById("titulo").value;
+//         const duracion = document.getElementById("duracion").value;
+//         const youtubeLink = document.getElementById("url").value;
 
-const addSong = async () => {
-  
-  const albumId = getAlbumIdFromUrl();
-  const titulo = document.getElementById("title").value;
-  const duracion = document.getElementById("duracion").value;
-  const youtubeLink = document.getElementById("url").value;
+//         const newSong = { titulo, duracion, youtubeLink, };
 
-  const newSong = { titulo,  duracion, youtubeLink,};
+//         try {
+//             console.log(albumId)
+//             const album = await getAlbum(albumId);
 
-  try {
-      const album = await getAlbum(albumId);
+//             // Agregar la canción nueva al array de canciones
+//             album.canciones.push(newSong);
 
-      // Agrego la canción nueva al array de canciones
-      album.canciones.push(newSong);
+//             // Hacer la petición PUT para actualizar el álbum
+//             await axios.put(`http://localhost:5000/Album/albumes/${albumId}`, album);
 
-      // Hacer la petición PUT para actualizar el álbum
-      await axios.put(`http://localhost:5000/albums/band/${albumId}`, album);
+//             // Mostrar alerta de éxito y redirigir a la vista del álbum
+//             swal("Éxito", "La canción ha sido añadida correctamente", "success")
+//                 .then(() => {
+//                     window.location.href = `./album.html?id=${albumId}`;
+//                 });
+//         } catch (error) {
+//             console.error(error);
+//             swal("Error", "No se pudo añadir la canción", "error");
+//         }
+//     };
+// }
 
-      // Mostrar alerta de éxito y redirigir a la vista del álbum
-      swal("Éxito", "La canción ha sido añadida correctamente", "success")
-          .then(() => {
-              window.location.href = `./album.html?album=${albumId}`;
-          });
-  } catch (error) {
-      console.error(error);
-      swal("Error", "No se pudo añadir la canción", "error");
-  }
-};
+
+
+// Verificar si la URL de la página actual corresponde a la página deseada
+if (window.location.pathname === '/addSong.html') {
+    // Código a ejecutar solamente en la página deseada
+    document.getElementById("indexLink").addEventListener("click", function(){
+        window.location.href = "index.html";
+    });
+
+    document.getElementById("masAlbumesLink").addEventListener("click", function(){
+        window.location.href = "index.html";
+    });
+
+    const getAlbumIdFromUrl = function(){
+        const params = new URLSearchParams(window.location.search);
+        return params.get("albumId");
+    };
+
+    const getAlbum = async (albumId) => {
+        try {
+            const { data } = await axios.get(`http://localhost:5000/Album/albumes/${albumId}`);
+            return data;
+        } catch (error) {
+            console.error(error);
+            swal("Error", "No se pudo obtener la información del álbum", "error");
+        }
+    };
+
+    let albumData;
+
+    const albumId = getAlbumIdFromUrl();
+
+    const addSong = async () => {
+        // e.preventDefault();
+        const titulo = document.getElementById("titulo").value;
+        const duracion = document.getElementById("duracion").value;
+        const youtubeLink = document.getElementById("url").value;
+        const url = "assets/discos/evolve/Imagine Dragons  I Dont Know Why.mp3"
+        const newSong = { titulo, duracion, youtubeLink, url };
+
+        try {
+            // Añadir la nueva canción al array de canciones del álbum
+            albumData.canciones.push(newSong);
+            console.log(newSong)
+            console.log(albumData)
+            // Hacer la petición PUT para actualizar el álbum
+           
+            await axios.put(`http://localhost:5000/Album/albumes/${albumId}`, albumData);
+
+            // Mostrar alerta de éxito y redirigir a la vista del álbum
+            swal("Éxito", "La canción ha sido añadida correctamente", "success")
+                .then(() => {
+                    window.location.href = `./album.html?id=${albumId}`;
+                });
+        } catch (error) {
+            console.error(error);
+            swal("Error", "No se pudo añadir la canción", "error");
+        }
+    };
+
+    document.getElementById("botonCancion").addEventListener("click", function(e){
+        e.preventDefault();
+        addSong();
+    });
+
+    document.getElementById("cancelar").addEventListener("click", function(e){
+        e.preventDefault();
+        window.location.href = `./album.html?id=${albumId}`;
+    });
+
+    // Obtener los datos del álbum al cargar la página
+    (async () => {
+        albumData = await getAlbum(albumId);
+    })();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

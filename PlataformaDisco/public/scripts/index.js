@@ -66,7 +66,18 @@ const renderAlbums = (album) => {
   p.textContent = album.titulo +" "+ album.year
   newDiv.appendChild(p)
 
-}
+
+  const deleteIcon = document.createElement('span');
+    deleteIcon.classList.add('cursor-pointer', 'ml-4');
+    deleteIcon.innerHTML = '<i class="fa fa-trash text-black-500"></i>';
+
+    deleteIcon.addEventListener('click', function(){
+      deleteAlbum(album._id, album.titulo);
+    })
+    newDiv.appendChild(deleteIcon);
+  }
+
+
 
 
 async function getAlbums() {
@@ -85,6 +96,18 @@ async function getAlbums() {
   }
 };
 
+const deleteAlbum = async (albumId, albumTitle) => {
+  try {
+    await axios.delete(`http://localhost:5000/Album/albumes/${albumId}`);
+    swal("Éxito", `Borraste ${albumTitle} de la lista`, "success")
+      .then(() => {
+        window.location.reload();
+      });
+  } catch (error) {
+    console.error(error);
+    swal("Error", "No se pudo eliminar el álbum", "error");
+  }
+};
 
 window.onload = getAlbums;
 

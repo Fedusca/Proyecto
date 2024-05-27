@@ -25,23 +25,11 @@
         <span class="username">Fedusca</span>
       </div>
       <div class="menu">
-        <div class="section">
-          <a href="index.html"> Volver al Inicio </a>
+        <div class="section" id="indexLink">
+          <a href="#"> Volver al Inicio </a>
         </div>
-        <div class="section">
-          <a href="index.html"> Más Albunes </a>
-        </div>
-        <div class="section">
-          <a href="addalbum.html"> Agrega albunes </a>
-        </div>
-        <div class="section">
-          <a href="editAlbum.html"> Editar album </a>
-        </div>
-        <div class="section">
-          <a href="logIn.html"> Iniciar Sesion </a>
-        </div>
-        <div class="section">
-          <a href="logIn.html"> Log out </a>
+        <div class="section" id="masAlbumesLink">
+          <a href="#"> Más Albunes </a>
         </div>
       </div>
     </div>
@@ -53,29 +41,24 @@
           <input type="text" placeholder="Titulo" class="input" id="titulo"/>
         </label>
         <label
-          >Año de lanzamiento
-          <input type="number" name="Año" class="input" id="year"/>
-        </label>
-        <label
           >Duracion
           <input type="number" name="Año" class="input" id="duracion"/>
         </label>
         <label
-          >Imagen de album
+          >Video YouTube
           <input
             type="text"
             name="Image"
             placeholder="URL de imagen"
             class="input"
-            id="portada"
+            id="url"
           />
         </label>
-        <button type="submit" class="submit" id="addCancion">Agregar cancion</button>
+        <button type="submit" class="submit" id="botonCancion">Agregar cancion</button>
         <button type="button" class="submit" id="cancelar">Cancelar</button>
       </form>
     </div>
-    <script src="scripts/valueForm.js"></script>
-    <script src="scripts/addSong.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/addSong.js"></script>
   </body>
 </html>
