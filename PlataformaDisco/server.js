@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const path = require("path");
 const routes = require("./routes/index");
 const mongoose = require("mongoose");
@@ -15,16 +15,13 @@ mongoose.connect("mongodb+srv://fedusca:del1al9@cluster0.blldddk.mongodb.net/Pro
 });
 
 
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/health", (req, res) => res.sendStatus(200));
 app.use('/', routes);
 
-
-
-
-
-
-app.listen(PORT,()=>{
-    console.log("Iniciado server en puerto 5000");
-})
+app.listen(PORT, () => {
+    console.log(`Iniciado server en puerto ${PORT}`);
+});
