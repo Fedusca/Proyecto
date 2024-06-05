@@ -16,12 +16,7 @@ mongoose.connect("mongodb+srv://fedusca:del1al9@cluster0.blldddk.mongodb.net/Pro
 
 
 
-// Configuración de CORS
-app.use(cors({
-    origin: 'https://proyecto-plataformadisco.onrender.com', // o el origen que desees permitir
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // los métodos que desees permitir
-    credentials: true // habilita el envío de cookies
-  }));
+app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/health", (req, res) => res.sendStatus(200));
