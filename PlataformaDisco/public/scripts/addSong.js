@@ -43,7 +43,7 @@ if (window.location.pathname === '/addSong.html') {
         if (!validateInputs(titulo, duracion, youtubeLink, url)) {
             return;
         }
-
+ 
         const newSong = { titulo, duracion, youtubeLink, url };
 
         try {
