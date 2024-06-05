@@ -30,7 +30,7 @@ let contrasena = document.getElementById("contrasena");
 boton.addEventListener("click", async function(e) {
     e.preventDefault();
     
-    // Validar los inputs
+   
     if (!validateUserInputs(nombre.value, apellido.value, email.value, contrasena.value)) {
         return;
     }
