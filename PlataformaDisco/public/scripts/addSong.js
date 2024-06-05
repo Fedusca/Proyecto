@@ -20,7 +20,7 @@ if (window.location.pathname === '/addSong.html') {
 
     const getAlbum = async (albumId) => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/Album/albumes/${albumId}`);
+            const { data } = await axios.get(`Album/albumes/${albumId}`);
             return data;
         } catch (error) {
             console.error(error);
@@ -52,7 +52,7 @@ if (window.location.pathname === '/addSong.html') {
             console.log(newSong)
             console.log(albumData)
             // Hacer la petición PUT para actualizar el álbum
-            await axios.put(`http://localhost:5000/Album/albumes/${albumId}`, albumData);
+            await axios.put(`Album/albumes/${albumId}`, albumData);
 
             // Mostrar alerta de éxito y redirigir a la vista del álbum
             swal("Éxito", "La canción ha sido añadida correctamente", "success")

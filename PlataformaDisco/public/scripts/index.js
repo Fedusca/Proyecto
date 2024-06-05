@@ -98,7 +98,7 @@ async function getAlbums() {
 
 const deleteAlbum = async (albumId, albumTitle) => {
   try {
-    await axios.delete(`http://localhost:5000/Album/albumes/${albumId}`);
+    await axios.delete(`/Album/albumes/${albumId}`);
     swal("Éxito", `Borraste ${albumTitle} de la lista`, "success")
       .then(() => {
         window.location.reload();

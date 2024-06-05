@@ -75,7 +75,7 @@ if (window.location.pathname.includes('editAlbum.html')) {
 
   const loadAlbumDetails = async (albumId) => {
       try {
-          const response = await axios.get(`http://localhost:5000/Album/albumes/${albumId}`);
+          const response = await axios.get(`/Album/albumes/${albumId}`);
           const album = response.data;
           document.getElementById('titulo').value = album.titulo;
           document.getElementById('descripcion').value = album.descripcion;
@@ -97,7 +97,7 @@ if (window.location.pathname.includes('editAlbum.html')) {
       }
 
       try {
-        await axios.put(`http://localhost:5000/Album/albumes/${albumId}`, albumData);
+        await axios.put(`/Album/albumes/${albumId}`, albumData);
         swal({
             title: '¡Álbum editado!',
             text: 'Has modificado el álbum correctamente.',

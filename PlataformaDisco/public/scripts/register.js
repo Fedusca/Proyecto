@@ -37,7 +37,7 @@ boton.addEventListener("click", async function(e) {
     
     try {
         console.log("Intentando enviar datos al backend...");
-        const response = await axios.post("http://localhost:5000/user/user", {
+        const response = await axios.post("/user/user", {
             nombre: nombre.value,
             apellido: apellido.value,
             email: email.value,
