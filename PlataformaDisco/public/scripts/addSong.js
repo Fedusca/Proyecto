@@ -27,7 +27,7 @@ if (window.location.pathname === '/addSong.html') {
             swal("Error", "No se pudo obtener la información del álbum", "error");
         }
     };
-
+ 
     let albumData;
 
     const albumId = getAlbumIdFromUrl();
