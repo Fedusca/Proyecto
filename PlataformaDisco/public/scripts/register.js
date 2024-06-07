@@ -50,7 +50,7 @@ boton.addEventListener("click", async function(e) {
             icon: "success",
             confirmButtonText: "Ok"
         }).then(() => {
-            window.location.href = "./login.html";
+            window.location.href = "../logIn.html";
         });
     } catch (error) {
         console.error('Error al registrar al usuario:', error);
